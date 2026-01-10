@@ -1,5 +1,14 @@
 pluginManagement {
     repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -8,17 +17,9 @@ pluginManagement {
             }
         }
         mavenCentral()
-        gradlePluginPortal()
-    }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
     }
 }
 
 rootProject.name = "MyMovieApp"
 include(":app")
- 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
