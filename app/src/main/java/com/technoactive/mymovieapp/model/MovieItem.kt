@@ -11,4 +11,5 @@ data class MovieItem(
     val id: String,
     @SerializedName("Poster")
     val moviePoster: String,
+    val description: String,
 )
